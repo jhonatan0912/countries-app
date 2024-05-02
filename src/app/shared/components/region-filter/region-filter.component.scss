@@ -4,10 +4,13 @@
   color: var(--white);
   position: relative;
   display: flex;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem 1rem 2rem;
   align-items: center;
   justify-content: space-between;
-  width: 200px;
+  width: 150px;
+  margin-top: 3rem;
+  font-size: 14px;
+  font-weight: 300;
 
   .icon {
     width: 16px !important;
@@ -20,7 +23,7 @@
 
   &.open {
     position: absolute;
-    top: 24px;
+    top: 18px;
     left: 0;
     width: 100%;
     display: flex;
