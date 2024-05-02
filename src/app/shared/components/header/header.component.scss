@@ -2,8 +2,7 @@
   display: flex;
   justify-content: space-between;
   padding: 2rem 1rem;
-  background: var(--dark-blue);
-  color: var(--white);
+  background: var(--elements);
   position: fixed;
   top: 0;
   left: 0;
@@ -25,8 +24,12 @@
     width: 20px;
     height: 20px;
 
-    &.dark {
-      filter: invert(1);
-    }
+    // &.dark {
+    //   filter: invert(1);
+    // }
+
+    // &.light {
+    //   filter: invert(0);
+    // }
   }
 }

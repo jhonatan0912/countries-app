@@ -21,7 +21,7 @@ export class RegionFilterComponent {
 
   regions: Region[] = [
     { id: 'africa', name: 'Africa' },
-    { id: 'america', name: 'America' },
+    { id: 'americas', name: 'America' },
     { id: 'asia', name: 'Asia' },
     { id: 'europe', name: 'Europe' },
     { id: 'oceania', name: 'Oceania' }

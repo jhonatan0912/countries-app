@@ -14,7 +14,7 @@ export class HeaderComponent {
 
   get themeSrc(): string {
     return this.themeService.theme() === 'dark'
-      ? '/assets/icons/moon.svg'
-      : '/assets/icons/sun.svg';
+      ? '/assets/icons/sun.svg'
+      : '/assets/icons/moon.svg';
   }
 }
