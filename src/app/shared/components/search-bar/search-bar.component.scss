@@ -1,0 +1,14 @@
+:host {
+  padding: .5rem 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.search__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.input {
+  flex: 1;
+}

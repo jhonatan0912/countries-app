@@ -1,0 +1,23 @@
+:host {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem .5rem;
+  background: var(--dark-blue);
+  color: var(--white);
+}
+
+.title {
+  font-weight: 500;
+}
+
+.theme {
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: .2rem;
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+}
