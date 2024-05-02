@@ -18,10 +18,10 @@
   text-transform: capitalize;
   display: flex;
   align-items: center;
-  gap: .2rem;
+  gap: .3rem;
 
   &__icon {
-    width: 20px;
-    height: 20px;
+    width: 18px !important;
+    height: 18px !important;
   }
 }
