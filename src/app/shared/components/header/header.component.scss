@@ -24,12 +24,12 @@
     width: 20px;
     height: 20px;
 
-    // &.dark {
-    //   filter: invert(1);
-    // }
+    &.dark {
+      filter: invert(1);
+    }
 
-    // &.light {
-    //   filter: invert(0);
-    // }
+    &.light {
+      filter: invert(0);
+    }
   }
 }

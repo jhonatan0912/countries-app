@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject, input, signal } from '@angular/core';
+import { Router } from '@angular/router';
+import { CountryDto } from '@core/proxies';
+import { CountriesService } from '@shared/services';
 
 @Component({
   standalone: true,
@@ -8,9 +11,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailComponent implements OnInit {
 
-  constructor() { }
+  private readonly _countriesService = inject(CountriesService);
+  private readonly _router = inject(Router);
+
+  name = input.required<string>();
+  country = signal<CountryDto>(new CountryDto());
 
   ngOnInit() {
+    this.onGetCountryDetails();
   }
 
+  onGetCountryDetails(): void {
+    if (!this._countriesService.country()) {
+      this.onBack();
+    } else {
+      this.country.set(this._countriesService.country()!);
+    }
+  }
+
+  onBack(): void {
+    this._router.navigateByUrl('/');
+  }
 }

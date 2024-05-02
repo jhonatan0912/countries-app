@@ -1,4 +1,4 @@
-import { Component, OnInit, input } from '@angular/core';
+import { Component, HostListener, input, output } from '@angular/core';
 import { CountryDto } from '@core/proxies';
 
 @Component({
@@ -8,13 +8,14 @@ import { CountryDto } from '@core/proxies';
   templateUrl: './country.component.html',
   styleUrls: ['./country.component.scss']
 })
-export class CountryComponent implements OnInit {
+export class CountryComponent {
 
   country = input.required<CountryDto>();
 
-  constructor() { }
+  onCountry = output<void>();
 
-  ngOnInit() {
+  @HostListener('click')
+  onClick(): void {
+    this.onCountry.emit();
   }
-
 }

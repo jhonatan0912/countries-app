@@ -1,3 +1,5 @@
 @for (country of countries(); track $index) {
-<country-item [country]="country" />
+<country-item
+  [country]="country"
+  (onCountry)="onCountry(country)" />
 }

@@ -9,4 +9,5 @@ export class CountriesService {
   loaded = signal<boolean>(false);
   countries = signal<CountryDto[]>([]);
 
+  country = signal<CountryDto | undefined>(undefined);
 }
