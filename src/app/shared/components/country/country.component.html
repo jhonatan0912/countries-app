@@ -1,19 +1,19 @@
-<!-- <img
+<img
   class="country__flag"
   [src]="country().flag"
-  [alt]="country().name + ' Flag'"> -->
+  [alt]="country().name + ' Flag'">
 
 <section class="country__body">
   <p class="country__body__name">
     {{ country().name }}
   </p>
   <p class="country__body__population">
-    {{ country().population }}
+    <span class="fw-500">Population: </span>{{ country().population }}
   </p>
   <p class="country__body__region">
-    {{ country().region }}
+    <span class="fw-500">Region: </span>{{ country().region }}
   </p>
   <p class="country__body__capital">
-    {{ country().capital }}
+    <span class="fw-500">Capital: </span>{{ country().capital }}
   </p>
 </section>

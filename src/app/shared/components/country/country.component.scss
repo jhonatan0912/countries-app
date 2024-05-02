@@ -10,4 +10,13 @@
 
 .country__body {
   padding: 2rem;
+
+  &__name {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  &__population {
+    margin-top: 1.5rem;
+  }
 }
