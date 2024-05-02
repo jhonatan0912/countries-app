@@ -1,0 +1,16 @@
+<button
+  class="filter__box"
+  (click)="onShowRegions()"
+  tabindex="-1">
+  Filter by Region
+
+  <section
+    class="regions"
+    [ngClass]="{'open' : showRegions}">
+    @for (region of regions; track $index) {
+    <span class="region" (click)="onSelectRegion(region.id)">
+      {{ region.name }}
+    </span>
+    }
+  </section>
+</button>

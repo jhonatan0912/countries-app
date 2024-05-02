@@ -1,5 +1,6 @@
-import { Component, OnInit, output } from '@angular/core';
+import { Component, OnInit, inject, output } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { AppThemeService } from '@shared/services';
 import { debounceTime, distinctUntilChanged } from 'rxjs';
 
 @Component({
@@ -10,6 +11,8 @@ import { debounceTime, distinctUntilChanged } from 'rxjs';
   styleUrls: ['./search-bar.component.scss']
 })
 export class SearchBarComponent implements OnInit {
+
+  themeService = inject(AppThemeService);
 
   onSearch = output<string>();
 

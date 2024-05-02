@@ -2,7 +2,7 @@
   Where in the world?
 </span>
 
-<div class="theme">
+<div class="theme" (click)="themeService.toggle()">
   <img
     class="theme__icon {{ themeService.theme() }}"
     [src]="themeSrc"

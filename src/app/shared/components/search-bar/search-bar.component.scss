@@ -12,6 +12,10 @@
 .search__icon {
   width: 18px;
   height: 18px;
+
+  &.dark {
+    filter: invert(1);
+  }
 }
 
 .input {

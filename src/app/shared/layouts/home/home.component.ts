@@ -1,13 +1,14 @@
 import { Component, DestroyRef, OnInit, inject, signal } from '@angular/core';
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 import { CountriesProxy, CountryDto } from '@core/proxies';
-import { CountriesListComponent, SearchBarComponent } from '@shared/components';
+import { CountriesListComponent, RegionFilterComponent, SearchBarComponent } from '@shared/components';
 import { CountriesService } from '@shared/services';
 
 @Component({
   standalone: true,
   imports: [
     SearchBarComponent,
+    RegionFilterComponent,
     CountriesListComponent,
   ],
   templateUrl: './home.component.html',
@@ -48,6 +49,13 @@ export class HomeComponent implements OnInit {
         return this._countriesService.countries();
       }
       return this.countries().filter(country => country.name.toLowerCase().includes(term));
+    });
+  }
+
+  onFilterByRegion(regionId: string): void {
+    this.countries.set(this._countriesService.countries());
+    this.countries.update(() => {
+      return this.countries().filter(country => country.region.toLowerCase() === regionId);
     });
   }
 }

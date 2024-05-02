@@ -4,6 +4,11 @@
   padding: 2rem 1rem;
   background: var(--dark-blue);
   color: var(--white);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }
 
 .title {

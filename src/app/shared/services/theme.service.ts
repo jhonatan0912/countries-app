@@ -9,13 +9,22 @@ export class AppThemeService {
 
   private readonly _platformId = inject(PLATFORM_ID);
 
-  theme = signal<Theme>('light');
+  theme = signal<Theme>('dark');
 
   init(): void {
     if (!isPlatformBrowser(this._platformId)) return;
 
     const theme = localStorage.getItem('theme') as Theme;
     this.setTheme(theme);
+  }
+
+  toggle(): void {
+    this.theme.update((current) => {
+      const newTheme = current === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', newTheme);
+      this.setThemeToBody(newTheme);
+      return newTheme;
+    });
   }
 
   private setTheme(theme: Theme | undefined): void {
