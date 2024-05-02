@@ -4,8 +4,8 @@
 
 <div class="theme" (click)="themeService.toggle()">
   <img
-    class="theme__icon {{ themeService.theme() }}"
-    [src]="themeSrc"
+    class="theme__icon {{icon }}"
+    [src]="iconSrc"
     alt="Theme Icon">
   {{ themeService.theme() === 'light' ? 'Dark' : 'Light' }} Mode
 </div>

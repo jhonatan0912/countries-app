@@ -3,18 +3,7 @@
   align-items: center;
   gap: 1rem;
   background: var(--dark-blue);
-  width: 90%;
   border-radius: 5px;
-}
-
-.search__icon {
-  width: 18px;
-  height: 18px;
-
-  &.dark {
-    filter: invert(1);
-  }
-
 }
 
 .search__input {

@@ -12,9 +12,15 @@ export class HeaderComponent {
 
   themeService = inject(AppThemeService);
 
-  get themeSrc(): string {
+  get icon(): string {
+    return this.themeService.theme() === 'dark'
+      ? 'icon sun'
+      : 'icon moon';
+  }
+
+  get iconSrc(): string {
     return this.themeService.theme() === 'dark'
       ? '/assets/icons/sun.svg'
-      : '/assets/icons/moon.svg';
+      : '/assets/icons/moon.svg'
   }
 }

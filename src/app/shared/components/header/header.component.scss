@@ -23,13 +23,5 @@
   &__icon {
     width: 20px;
     height: 20px;
-
-    &.dark {
-      filter: invert(1);
-    }
-
-    &.light {
-      filter: invert(0);
-    }
   }
 }

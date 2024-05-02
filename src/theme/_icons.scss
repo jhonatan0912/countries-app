@@ -1,0 +1,27 @@
+.icon {
+  width: 24px !important;
+  height: 24px !important;
+  mask-repeat: no-repeat !important;
+  -webkit-mask-repeat: no-repeat !important;
+  mask-repeat: no-repeat !important;
+  mask-size: contain !important;
+  color: currentColor !important;
+
+  &.search {
+    background-color: currentColor !important;
+    background: currentColor !important;
+    mask-image: url('/assets/icons/search.svg') !important;
+  }
+
+  &.moon {
+    background-color: currentColor !important;
+    background: currentColor !important;
+    mask-image: url('/assets/icons/moon.svg') !important;
+  }
+
+  &.sun {
+    background-color: currentColor !important;
+    background: currentColor !important;
+    mask-image: url('/assets/icons/sun.svg') !important;
+  }
+}
