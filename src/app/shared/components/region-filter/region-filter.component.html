@@ -1,9 +1,15 @@
 <button
+  id="filter-box"
   class="filter__box"
   (click)="onShowRegions()"
   tabindex="-1">
-  Filter by Region
+  <span>Filter by Region</span>
 
+  <img
+    class="icon arrow-down"
+    src="/assets/icons/arrow-down.svg"
+    alt="Arrow down">
+    
   <section
     class="regions"
     [ngClass]="{'open' : showRegions}">

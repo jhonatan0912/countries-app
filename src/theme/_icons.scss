@@ -1,6 +1,6 @@
 .icon {
-  width: 24px !important;
-  height: 24px !important;
+  width: 24px;
+  height: 24px;
   mask-repeat: no-repeat !important;
   -webkit-mask-repeat: no-repeat !important;
   mask-repeat: no-repeat !important;
@@ -23,5 +23,11 @@
     background-color: currentColor !important;
     background: currentColor !important;
     mask-image: url('/assets/icons/sun.svg') !important;
+  }
+
+  &.arrow-down {
+    background-color: currentColor !important;
+    background: currentColor !important;
+    mask-image: url('/assets/icons/arrow-down.svg') !important;
   }
 }

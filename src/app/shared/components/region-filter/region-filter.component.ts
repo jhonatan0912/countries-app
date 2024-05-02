@@ -1,10 +1,8 @@
-import { NgClass } from '@angular/common';
-import { Component, OnInit, output } from '@angular/core';
+import { NgClass, isPlatformBrowser } from '@angular/common';
+import { AfterViewInit, Component, PLATFORM_ID, inject, output } from '@angular/core';
+import { Region, regions } from '@shared/utils';
 
-interface Region {
-  id: string;
-  name: string;
-}
+
 
 @Component({
   selector: 'filter-by-region',
@@ -15,19 +13,20 @@ interface Region {
   templateUrl: './region-filter.component.html',
   styleUrls: ['./region-filter.component.scss']
 })
-export class RegionFilterComponent {
+export class RegionFilterComponent implements AfterViewInit {
+
+  private readonly _platformId = inject(PLATFORM_ID);
 
   onFilter = output<string>();
 
-  regions: Region[] = [
-    { id: 'africa', name: 'Africa' },
-    { id: 'americas', name: 'America' },
-    { id: 'asia', name: 'Asia' },
-    { id: 'europe', name: 'Europe' },
-    { id: 'oceania', name: 'Oceania' }
-  ];
-
+  regions: Region[] = regions;
   showRegions: boolean = false;
+
+  ngAfterViewInit(): void {
+    if (isPlatformBrowser(this._platformId)) {
+
+    }
+  }
 
   onShowRegions(): void {
     this.showRegions = !this.showRegions;

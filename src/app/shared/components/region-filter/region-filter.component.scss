@@ -4,14 +4,23 @@
   color: var(--white);
   position: relative;
   display: flex;
+  padding: 1rem 2rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+
+  .icon {
+    width: 16px !important;
+    height: 16px !important;
+  }
 }
 
 .regions {
   display: none;
-  transition: display 0.3s ease-in;
 
   &.open {
     position: absolute;
+    top: 24px;
     left: 0;
     width: 100%;
     display: flex;
@@ -21,7 +30,6 @@
     background: var(--dark-blue);
     margin-top: 2.5rem;
     border-radius: 5px;
-    transition: display 0.3s ease-in;
   }
 
   .region {
