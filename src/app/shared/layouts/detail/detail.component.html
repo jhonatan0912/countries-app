@@ -1,53 +1,54 @@
+<main class="country__details">
+  <button
+    (click)="onBack()"
+    class="back__button">
+    Back
+  </button>
 
+  <img
+    class="country__flag"
+    [src]="country().flag"
+    [alt]="country().name + ' Flag'">
 
-<button
-  (click)="onBack()"
-  class="back__button">
-  Back
-</button>
+  <p class="country__name">
+    {{ country().name }}
+  </p>
 
-<img
-  [src]="country().flag"
-  [alt]="country().name + ' Flag'">
+  <p class="country__detail">
+    <span>Native Name: </span> {{ country().nativeName }}
+  </p>
+  <p class="country__detail">
+    <span>Population: </span> {{country().population }}
+  </p>
+  <p class="country__detail">
+    <span>Region: </span> {{country().region }}
+  </p>
+  <p class="country__detail">
+    <span>Sub Region: </span> {{country().subregion }}
+  </p>
+  <p class="country__detail">
+    <span>Capital: </span> {{country().capital }}
+  </p>
 
-<p class="country__name">
-  {{ country().name }}
-</p>
+  <p class="country__detail tld">
+    <span>Top Level Domain: </span> {{country().topLevelDomain }}
+  </p>
+  <p class="country__detail">
+    <span>Currencies: </span> {{ country().formatedCurrencies }}
+  </p>
+  <p class="country__detail">
+    <span>Languages: </span> {{ country().formatedLanguages }}
+  </p>
 
-<p>
-  <span>Native Name: </span> {{ country().nativeName }}
-</p>
-<p>
-  <span>Population: </span> {{country().population }}
-</p>
-<p>
-  <span>Region: </span> {{country().region }}
-</p>
-<p>
-  <span>Sub Region: </span> {{country().subregion }}
-</p>
-<p>
-  <span>Capital: </span> {{country().capital }}
-</p>
+  <section class="country__borders">
+    <span class="country__borders__title">Border Countries: </span>
 
-<p>
-  <span>Top Level Domain: </span> {{country().topLevelDomain }}
-</p>
-<p>
-  <span>Currencies: </span> {{ country().formatedCurrencies }}
-</p>
-<p>
-  <span>Languages: </span> {{ country().formatedLanguages }}
-</p>
-
-<section class="country__borders">
-  <span class="country__borders__title">Border Countries: </span>
-
-  <section class="country__borders__items">
-    @for (border of country().borders; track $index) {
-    <article class="border">
-      {{ border }}
-    </article>
-    }
+    <section class="country__borders__items">
+      @for (border of country().borders; track $index) {
+      <article class="border">
+        {{ border }}
+      </article>
+      }
+    </section>
   </section>
-</section>
+</main>

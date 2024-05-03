@@ -44,6 +44,10 @@ export class CountryDto {
   cioc!: string;
   independent!: boolean;
 
+  constructor(data?: any) {
+    this.init(data);
+  }
+
   init(data?: any): void {
     if (data) {
       this.name = data['name'];

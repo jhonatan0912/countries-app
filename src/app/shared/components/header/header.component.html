@@ -2,10 +2,7 @@
   Where in the world?
 </span>
 
-<div class="theme" (click)="themeService.toggle()">
-  <img
-    class="theme__icon {{icon }}"
-    [src]="iconSrc"
-    alt="Theme Icon">
+<section (click)="themeService.toggle()" class="theme pointer">
+  <span class="icon {{ icon }}"></span>
   {{ themeService.theme() === 'light' ? 'Dark' : 'Light' }} Mode
-</div>
+</section>
