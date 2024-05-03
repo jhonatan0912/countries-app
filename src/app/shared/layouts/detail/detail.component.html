@@ -6,50 +6,63 @@
     Back
   </button>
 
-  <img
-    class="country__flag"
-    [src]="country().flag"
-    [alt]="country().name + ' Flag'">
+  <section class="country__details__container">
+    <img
+      class="country__flag"
+      [src]="country().flag"
+      [alt]="country().name + ' Flag'">
 
-  <p class="country__name">
-    {{ country().name }}
-  </p>
+    <section class="country__details__content">
+      <p class="country__name">
+        {{ country().name }}
+      </p>
 
-  <p class="country__detail">
-    <span>Native Name: </span> {{ country().nativeName }}
-  </p>
-  <p class="country__detail">
-    <span>Population: </span> {{country().population }}
-  </p>
-  <p class="country__detail">
-    <span>Region: </span> {{country().region }}
-  </p>
-  <p class="country__detail">
-    <span>Sub Region: </span> {{country().subregion }}
-  </p>
-  <p class="country__detail">
-    <span>Capital: </span> {{country().capital }}
-  </p>
+      <section class="conuntry__details__cols">
+        <div>
+          <p class="country__detail">
+            <span class="country__detail__item">Native Name: </span> {{ country().nativeName }}
+          </p>
+          <p class="country__detail">
+            <span class="country__detail__item">Population: </span> {{country().population }}
+          </p>
+          <p class="country__detail">
+            <span class="country__detail__item">Region: </span> {{country().region }}
+          </p>
+          <p class="country__detail">
+            <span class="country__detail__item">Sub Region: </span> {{country().subregion }}
+          </p>
+          <p class="country__detail">
+            <span class="country__detail__item">Capital: </span> {{country().capital }}
+          </p>
+        </div>
 
-  <p class="country__detail tld">
-    <span>Top Level Domain: </span> {{country().topLevelDomain }}
-  </p>
-  <p class="country__detail">
-    <span>Currencies: </span> {{ country().formatedCurrencies }}
-  </p>
-  <p class="country__detail">
-    <span>Languages: </span> {{ country().formatedLanguages }}
-  </p>
+        <div>
+          <p class="country__detail tld">
+            <span class="country__detail__item">Top Level Domain: </span> {{country().topLevelDomain }}
+          </p>
+          <p class="country__detail">
+            <span class="country__detail__item">Currencies: </span> {{ country().formatedCurrencies }}
+          </p>
+          <p class="country__detail">
+            <span class="country__detail__item">Languages: </span> {{ country().formatedLanguages }}
+          </p>
+        </div>
+      </section>
 
-  <section class="country__borders">
-    <span class="country__borders__title">Border Countries: </span>
+      <section class="country__borders">
+        <span class="country__borders__title">Border Countries: </span>
 
-    <section class="country__borders__items">
-      @for (border of country().borders; track $index) {
-      <article class="border">
-        {{ border }}
-      </article>
-      }
+        <section class="country__borders__items">
+          @for (border of country().borders; track $index) {
+          <article class="border">
+            {{ border }}
+          </article>
+          }
+        </section>
+      </section>
     </section>
   </section>
+
+
+
 </main>

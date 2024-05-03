@@ -34,6 +34,11 @@
 
 .country__detail {
   margin-top: .5rem;
+  font-size: 14px;
+
+  &__item {
+    font-weight: 700;
+  }
 
   &.tld {
     margin-top: 2rem;
@@ -64,4 +69,36 @@
     }
   }
 
+}
+
+@media screen and (min-width: 768px) {
+  .country__details__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    margin-top: 4rem;
+  }
+
+  .country__flag {
+    width: 30%;
+    height: 300px;
+    margin-top: 0;
+  }
+
+  .country__name {
+    font-size: 1.7rem;
+  }
+
+  .country__details__content {
+    flex: 1;
+  }
+
+  .conuntry__details__cols {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .country__borders {
+    margin-top: 4rem;
+  }
 }

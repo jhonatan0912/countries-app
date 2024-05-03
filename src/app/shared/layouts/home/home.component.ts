@@ -57,5 +57,10 @@ export class HomeComponent implements OnInit {
     this.countries.update(() => {
       return this.countries().filter(country => country.region.toLowerCase() === regionId);
     });
+    this.onScrollTop();
+  }
+
+  onScrollTop(): void {
+    window.scrollTo(0, 0);
   }
 }
