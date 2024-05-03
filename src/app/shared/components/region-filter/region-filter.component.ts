@@ -24,7 +24,15 @@ export class RegionFilterComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this._platformId)) {
+      document.addEventListener('click', this.onClickOutside.bind(this));
+    }
+  }
 
+  onClickOutside(event: MouseEvent): void {
+    const target = event.target as HTMLElement;
+
+    if (!target.closest('#filter-box')) {
+      this.showRegions = false;
     }
   }
 

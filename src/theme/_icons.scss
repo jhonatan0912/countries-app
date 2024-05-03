@@ -1,7 +1,6 @@
 .icon {
   width: 24px;
   height: 24px;
-  mask-repeat: no-repeat !important;
   -webkit-mask-repeat: no-repeat !important;
   mask-repeat: no-repeat !important;
   mask-size: contain !important;
@@ -9,31 +8,26 @@
   display: block;
 
   &.search {
-    background-color: currentColor !important;
     background: currentColor !important;
     mask-image: url('/assets/icons/search.svg') !important;
   }
 
   &.moon {
-    background-color: currentColor !important;
     background: currentColor !important;
     mask-image: url('/assets/icons/moon.svg') !important;
   }
 
   &.sun {
-    background-color: currentColor !important;
     background: currentColor !important;
     mask-image: url('/assets/icons/sun.svg') !important;
   }
 
   &.arrow-down {
-    background-color: currentColor !important;
     background: currentColor !important;
     mask-image: url('/assets/icons/arrow-down.svg') !important;
   }
 
   &.back-arrow {
-    background-color: currentColor !important;
     background: currentColor !important;
     mask-image: url('/assets/icons/back-arrow.svg') !important;
   }
