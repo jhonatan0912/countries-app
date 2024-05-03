@@ -6,13 +6,7 @@
   mask-repeat: no-repeat !important;
   mask-size: contain !important;
   color: currentColor !important;
-
-  svg {
-    width: 100%;
-    height: 100%;
-    background-color: red;
-    color: red;
-  }
+  display: block;
 
   &.search {
     background-color: currentColor !important;
@@ -36,5 +30,11 @@
     background-color: currentColor !important;
     background: currentColor !important;
     mask-image: url('/assets/icons/arrow-down.svg') !important;
+  }
+
+  &.back-arrow {
+    background-color: currentColor !important;
+    background: currentColor !important;
+    mask-image: url('/assets/icons/back-arrow.svg') !important;
   }
 }
