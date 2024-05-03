@@ -9,7 +9,7 @@
 }
 
 header {
-  max-width: 1440px;
+  max-width: 1200px;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -35,6 +35,6 @@ header {
 
 @media screen and (min-width: 768px) {
   header {
-    padding: 1rem;
+    padding: 1rem 0;
   }
 }
