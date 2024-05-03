@@ -35,7 +35,9 @@ export class CountryDto {
   numericCode!: string;
   flags!: CountryFlagsDto;
   currencies!: CountryCurrencyDto[];
+  formatedCurrencies!: string;
   languages!: CountryLanguageDto[];
+  formatedLanguages!: string;
   translations!: CountryTranslations;
   flag!: string;
   regionalBlocs!: CountryRegionalBlocs;
@@ -63,13 +65,21 @@ export class CountryDto {
       this.numericCode = data['numericCode'];
       this.flags = data['flags'] ? new CountryFlagsDto().fromJS(data['flags']) : <any>undefined;
       this.currencies = data['currencies'] ? data['currencies'].map((i: any) => new CountryCurrencyDto().fromJS(i)) : [];
+      this.formatedCurrencies = this.formatWithCommas(data['currencies']);
       this.languages = data['languages'] ? data['languages'].map((i: any) => new CountryLanguageDto().fromJS(i)) : [];
+      this.formatedLanguages = this.formatWithCommas(data['languages']);
       this.translations = data['translations'] ? new CountryTranslations().fromJS(data['translations']) : <any>undefined;
       this.flag = data['flag'];
       this.regionalBlocs = data['regionalBlocs'] ? new CountryRegionalBlocs().fromJS(data['regionalBlocs']) : <any>undefined;
       this.cioc = data['cioc'];
       this.independent = data['independent'];
     }
+  }
+
+  formatWithCommas<T>(list: T[]): string {
+    return !list
+      ? ''
+      : list.map((i: any) => i.name).join(', ');
   }
 
   fromJS(data: any): CountryDto {
