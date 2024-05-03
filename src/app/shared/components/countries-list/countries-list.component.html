@@ -1,5 +1,6 @@
 @for (country of countries(); track $index) {
 <country-item
+  class="pointer"
   [country]="country"
   (onCountry)="onCountry(country)" />
 }
