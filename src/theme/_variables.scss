@@ -2,6 +2,8 @@
   // Widths
   --mobile: 375px;
   --desktop: 1440px;
+  --header-mobile: 86px;
+  --header-desktop: 54px;
 
   // Colors
 
@@ -26,7 +28,7 @@
 
 body.light {
   background: var(--very-light-gray);
-  // --background: var(--very-light-gray);
+  --background: var(--very-light-gray);
   color: var(--very-dark-blue-text);
   --color-text: var(--very-dark-blue-text);
   --elements: var(--white);
@@ -35,7 +37,7 @@ body.light {
 
 body.dark {
   background: var(--very-dark-blue);
-  // --background: var(--very-dark-blue);
+  --background: var(--very-dark-blue);
   color: var(--white);
   --color-text: var(--white);
   --elements: var(--dark-blue);
