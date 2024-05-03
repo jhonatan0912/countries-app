@@ -1,8 +1,10 @@
-<span class="title">
-  Where in the world?
-</span>
+<header>
+  <span class="title">
+    Where in the world?
+  </span>
 
-<section (click)="themeService.toggle()" class="theme pointer">
-  <span class="icon {{ icon }}"></span>
-  {{ themeService.theme() === 'light' ? 'Dark' : 'Light' }} Mode
-</section>
+  <section (click)="themeService.toggle()" class="theme pointer">
+    <span class="icon {{ icon }}"></span>
+    {{ themeService.theme() === 'light' ? 'Dark' : 'Light' }} Mode
+  </section>
+</header>

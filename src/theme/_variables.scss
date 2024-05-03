@@ -28,7 +28,7 @@ body.light {
   background: var(--very-light-gray);
   // --background: var(--very-light-gray);
   color: var(--very-dark-blue-text);
-  // --color-text: var(--very-dark-blue-text);
+  --color-text: var(--very-dark-blue-text);
   --elements: var(--white);
   --input: var(--dark-gray);
 }
@@ -37,7 +37,7 @@ body.dark {
   background: var(--very-dark-blue);
   // --background: var(--very-dark-blue);
   color: var(--white);
-  // --color-text: var(--white);
+  --color-text: var(--white);
   --elements: var(--dark-blue);
   --input: var(--white);
 }

@@ -1,9 +1,6 @@
 
-<search-bar
-  (onSearch)="onSearch($event)" />
+<search-bar (onSearch)="onSearch($event)" />
 
-<filter-by-region
-  (onFilter)="onFilterByRegion($event)" />
+<filter-by-region (onFilter)="onFilterByRegion($event)" />
 
-<countries-list
-  [countries]="countries()" />
+<countries-list [countries]="countries()" />
