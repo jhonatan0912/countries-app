@@ -45,7 +45,7 @@ export class HomeComponent implements OnInit {
 
   onSearch(term: string): void {
     this.countries.update(() => {
-      if (term.length === 0) {
+      if (term.trim().length === 0) {
         return this._countriesService.countries();
       }
       return this.countries().filter(country => country.name.toLowerCase().includes(term));

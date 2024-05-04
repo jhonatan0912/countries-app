@@ -6,7 +6,7 @@
   padding-bottom: 2rem;
 }
 
-.searchbar-filter {
+.searchbar__filter {
   left: 0;
   padding-inline: 2rem;
   padding-top: 3rem;
@@ -22,17 +22,21 @@
     margin-top: 7rem;
   }
 
-  .searchbar-filter {
-    max-width: 1210px;
+  .searchbar__filter {
     margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     right: 0;
-    left: 14px;
     padding-inline: 0;
     top: var(--header-desktop);
     padding-bottom: .5rem;
+
+    .searchbar__filter__wrapper {
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: auto;
+      padding: 0;
+    }
   }
 
 }

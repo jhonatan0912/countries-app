@@ -2,4 +2,9 @@ $header-height: 86px;
 
 .container {
   padding-top: $header-height;
+  margin-right: 12px;
+
+  @supports (-moz-appearance:none) {
+    margin-right: 0;
+  }
 }
