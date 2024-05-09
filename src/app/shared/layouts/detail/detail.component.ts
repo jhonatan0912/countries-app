@@ -1,4 +1,5 @@
 import { Component, OnInit, inject, input, signal } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { CountryDto } from '@core/proxies';
 import { CountriesService } from '@shared/services';
@@ -11,6 +12,7 @@ import { CountriesService } from '@shared/services';
 })
 export class DetailComponent implements OnInit {
 
+  private readonly _title = inject(Title);
   private readonly _countriesService = inject(CountriesService);
   private readonly _router = inject(Router);
 
@@ -26,6 +28,7 @@ export class DetailComponent implements OnInit {
       this.onBack();
     } else {
       this.country.set(this._countriesService.country()!);
+      this._title.setTitle(this.country().name);
     }
   }
 

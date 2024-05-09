@@ -18,13 +18,16 @@ export class CountriesListComponent {
 
   private readonly _countriesService = inject(CountriesService);
   private readonly _router = inject(Router);
-  private readonly _title = inject(Title);
 
   countries = input.required<CountryDto[]>();
 
   onCountry(country: CountryDto): void {
     this._countriesService.country.set(country);
-    this._title.setTitle(country.name);
-    this._router.navigateByUrl(`/${country.name}`);
+    this._router.navigateByUrl(`/${this.onSanitize(country.name)}`);
+  }
+
+  onSanitize(countryName: string): string {
+    console.log(countryName.replace(/[^a-zA-Z0-9]/g, ''));
+    return countryName.replace(/[^a-zA-Z0-9]/g, '');
   }
 }
