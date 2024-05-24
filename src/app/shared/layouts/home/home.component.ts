@@ -1,4 +1,4 @@
-import { Component, DestroyRef, OnInit, inject, signal } from '@angular/core';
+import { Component, DestroyRef, inject, signal } from '@angular/core';
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 import { CountriesProxy, CountryDto } from '@core/proxies';
 import { CountriesListComponent, RegionFilterComponent, SearchBarComponent } from '@shared/components';
@@ -14,7 +14,7 @@ import { CountriesService } from '@shared/services';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
   private readonly _countriesProxy = inject(CountriesProxy);
   private readonly _countriesService = inject(CountriesService);
@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
 
   countries = signal<CountryDto[]>([]);
 
-  ngOnInit() {
+  constructor() {
     this.getCountries();
   }
 

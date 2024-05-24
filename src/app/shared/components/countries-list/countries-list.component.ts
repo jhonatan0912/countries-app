@@ -27,7 +27,6 @@ export class CountriesListComponent {
   }
 
   onSanitize(countryName: string): string {
-    console.log(countryName.replace(/[^a-zA-Z0-9]/g, ''));
     return countryName.replace(/[^a-zA-Z0-9]/g, '');
   }
 }
